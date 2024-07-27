@@ -1,46 +1,216 @@
-# Getting Started with Create React App
+# Infinite Image Gallery
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The **Infinite Image Gallery** is an interactive React application
+that allows users to search and explore high-quality images from
+Unsplash. The app features infinite scrolling, a modal view for image
+details, and a responsive design.
 
-In the project directory, you can run:
+## Project Structure
 
-### `npm start`
+The project is organized into the following key directories and files:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```arduino
+infinite-scroll-gallery/\
+├── public/\
+│   ├── favicon.ico\
+│   ├── index.html\
+│   ├── logo192.png\
+│   ├── logo512.png\
+│   ├── manifest.json\
+│   └── robots.txt\
+├── src/\
+│   ├── assets/\
+│   │   ├── styles/\
+│   │   │   └── styles.scss\
+│   │   └── screenshots/\
+│   │       ├── home-page.png\
+│   │       └── image-modal.png\
+│   ├── components/\
+│   │   ├── ImageCard.tsx\
+│   │   ├── ImageModal.tsx\
+│   │   ├── SearchBar.tsx\
+│   │   └── ImageCard.css\
+│   ├── services/\
+│   │   └── unsplashService.ts\
+│   ├── utils/\
+│   │   └── infiniteScroll.ts\
+│   ├── types/\
+│   │   └── interfaces.ts\
+│   ├── App.css\
+│   ├── App.tsx\
+│   ├── index.css\
+│   ├── index.tsx\
+│   ├── react-responsive-masonry.d.ts\
+│   └── logo.svg\
+├── postcss.config.js\
+├── tailwind.config.js
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React**: JavaScript library for building user interfaces. -
+- **TypeScript**: Superset of JavaScript that adds static types. -
+- **Axios**: HTTP client for making API requests. 
+- **Tailwind** **CSS**: Utility-first CSS framework for styling. 
+- **Unsplash API**: Provides high-quality images for the application. 
+- **Custom Hooks**: For handling infinite scrolling and other reusable logic.
 
-### `npm run build`
+## Installation and Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Install Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Using npm:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash 
+npm install 
+```
 
-### `npm run eject`
+Or using yarn:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash 
+yarn install 
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Set Up Environment Variables
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Create a `.env` file in the root directory and add your Unsplash API
+key. You can obtain your own API key by signing up at [Unsplash
+Developers](https://unsplash.com/developers):
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+``` REACT_APP_UNSPLASH_ACCESS_KEY=your-unsplash-access-key ```
 
-## Learn More
+### Starting the App
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Run the Development Server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Using npm:
+
+```bash 
+cd .\infinite-scroll-gallery\
+npm start
+```
+
+Or using yarn:
+
+```bash 
+yarn start
+```
+
+This will start the development server and open the application in your
+default web browser.
+
+#### Build for Production
+
+To build the application for production:
+
+Using npm:
+
+```bash 
+npm run build
+```
+
+Or using yarn:
+
+```bash 
+yarn build 
+```
+
+The production build will be available in the `build` directory.
+
+## Screenshots
+
+ **Home Page**
+
+![Home Page](screenshots/home-page.png)
+
+ **Image Modal**
+
+![Image Modal](screenshots/image-modal.png)
+
+## Components
+
+1. **`App`**
+
+- The root component that manages state and renders child components. -
+Handles image fetching, search queries, and selected image state.
+
+2.  **`ImageCard`**
+
+- Displays individual images in a card format. - Receives props for
+image URL, alt text, and tags. - Triggers the modal on click.
+
+3.  **`ImageModal`**
+
+- Shows detailed information about the selected image. - Includes a
+close button and a download link.
+
+4.  **`SearchBar`**
+
+- Allows users to input search queries and triggers image searches.
+
+## Utilities
+
+1. **`fetchImages`**
+
+- Function to fetch images from Unsplash API based on search queries
+and pagination.
+
+2. **`useInfiniteScroll`**
+
+- Custom hook for handling infinite scrolling behavior.
+
+## TypeScript Interfaces
+
+1. **`UnsplashImage`**
+
+- Defines the structure of an image object returned by the Unsplash
+API.
+
+2. **`ImageCardProps`**
+
+- Props for the `ImageCard` component.
+
+3. **`ImageModalProps`**
+
+- Props for the `ImageModal` component.
+
+4. **`SearchBarProps`**
+
+- Props for the `SearchBar` component.
+
+5. **`FetchImagesResponse`**
+
+- Structure of the response from the `fetchImages` function.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. **Fork the Repository**
+
+2. **Create a Feature Branch**
+
+```bash 
+git checkout -b feature/your-feature 
+```
+
+3. **Make Your Changes**
+
+4. **Commit Your Changes**
+
+```bash 
+git commit -am 'Add your changes'
+```
+
+5. **Push to the Branch**
+
+```bash 
+git push origin feature/your-feature 
+```
+
+6. **Create a Pull Request**
+
+Submit a pull request to merge your changes into the `main` branch.
