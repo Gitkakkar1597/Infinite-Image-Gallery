@@ -124,11 +124,11 @@ The production build will be available in the `build` directory.
 
  **Home Page**
 
-![Home Page](screenshots/home-page.png)
+![Home Page](/assets/screenshots/home-page.png)
 
  **Image Modal**
 
-![Image Modal](screenshots/image-modal.png)
+![Image Modal](/assets/screenshots/image-modal.png)
 
 ## Components
 
