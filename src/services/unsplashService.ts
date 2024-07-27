@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const UNSPLASH_ACCESS_KEY = 'N2vtRILymH8yMoozZfwq-QLDYyyRU0nn6KSO-Padwx0'; // Unsplash API access key
+const UNSPLASH_ACCESS_KEY = 'your-unsplash-access-key'; // Unsplash API access key
 
 export const fetchImages = async (query: string, page: number) => {
   try {
