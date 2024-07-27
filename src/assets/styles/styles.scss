@@ -1,0 +1,149 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for centering and padding */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+}
+
+/* Grid container for images */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  gap: 1rem; /* Space between items */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 column on extra small screens */
+  }
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.search-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #6200ea; /* Primary color */
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover {
+  background-color: #3700b3;
+}
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  max-height: 80%;
+  overflow: auto;
+  position: relative;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-info {
+  margin-top: 1rem;
+}
+
+.close-button {
+  background-color: #6200ea; /* Primary color */
+  border: none;
+  color: #e0e0e0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-button:hover {
+  background-color: #3700b3;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #6200ea; /* Primary color */
+  color: #e0e0e0;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+
+.download-button:hover {
+  background-color: #3700b3;
+}
