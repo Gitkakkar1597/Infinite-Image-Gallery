@@ -1,6 +1,11 @@
 import axios from 'axios';
 
-const UNSPLASH_ACCESS_KEY = 'your-unsplash-access-key'; // Unsplash API access key
+// Fetch the Unsplash API key from environment variables
+const UNSPLASH_ACCESS_KEY = process.env.REACT_APP_UNSPLASH_ACCESS_KEY;
+
+if (!UNSPLASH_ACCESS_KEY) {
+  throw new Error('Missing Unsplash Access Key');
+}
 
 export const fetchImages = async (query: string, page: number) => {
   try {
