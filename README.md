@@ -12,39 +12,39 @@ details, and a responsive design.
 The project is organized into the following key directories and files:
 
 ```arduino
-infinite-scroll-gallery/\
-├── public/\
-│   ├── favicon.ico\
-│   ├── index.html\
-│   ├── logo192.png\
-│   ├── logo512.png\
-│   ├── manifest.json\
-│   └── robots.txt\
-├── src/\
-│   ├── assets/\
-│   │   ├── styles/\
-│   │   │   └── styles.scss\
-│   │   └── screenshots/\
-│   │       ├── home-page.png\
-│   │       └── image-modal.png\
-│   ├── components/\
-│   │   ├── ImageCard.tsx\
-│   │   ├── ImageModal.tsx\
-│   │   ├── SearchBar.tsx\
-│   │   └── ImageCard.css\
-│   ├── services/\
-│   │   └── unsplashService.ts\
-│   ├── utils/\
-│   │   └── infiniteScroll.ts\
-│   ├── types/\
-│   │   └── interfaces.ts\
-│   ├── App.css\
-│   ├── App.tsx\
-│   ├── index.css\
-│   ├── index.tsx\
-│   ├── react-responsive-masonry.d.ts\
-│   └── logo.svg\
-├── postcss.config.js\
+infinite-scroll-gallery/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── assets/
+│   │   ├── styles/
+│   │   │   └── styles.scss
+│   │   └── screenshots/
+│   │       ├── home-page.png
+│   │       └── image-modal.png
+│   ├── components/
+│   │   ├── ImageCard.tsx
+│   │   ├── ImageModal.tsx
+│   │   ├── SearchBar.tsx
+│   │   └── ImageCard.css
+│   ├── services/
+│   │   └── unsplashService.ts
+│   ├── utils/
+│   │   └── infiniteScroll.ts
+│   ├── types/
+│   │   └── interfaces.ts
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   ├── index.tsx
+│   ├── react-responsive-masonry.d.ts
+│   └── logo.svg
+├── postcss.config.js
 ├── tailwind.config.js
 
 ```
